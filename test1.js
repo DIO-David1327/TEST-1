@@ -1537,13 +1537,6 @@
                 Feature2: "Nowa wersja",
                 Learn_more: "Ucz się więcej",
 
-                //cat_units: "",
-                //cat_icons: "",
-                //cat_forum: "",
-                //cat_trade: "",
-                //cat_wonders: "",
-                //cat_layout: "",
-                //cat_other: ""
             },
             Options: {
                 //bir: ["Licznik birem", "Zlicza i sumuje biremy z miast"],
