@@ -1,9 +1,3 @@
-data: {error: e.stack.replace(/'/g, '"'), "function": fn, browser: getBrowser(), version: version},
-
-data: {
-                           'rumeur' : rumeur
-                   },
-
 <?php
 
 $error = urldecode($_POST[error]);
