@@ -595,20 +595,6 @@
                 Quests : 'Quests',
                 Reservations : 'Reservations',
             },
-            reports : {
-                choose_folder : 'Choose folder',
-                enacted : 'enacted',
-                conquered : 'conquered',
-                spying : 'spying',
-                spy : 'Spy',
-                support : 'support',
-                supporting : 'supporting',
-                attacking : 'attacking',
-                farming_village : 'farming village',
-                gold : 'You have received',
-                Quests : 'Quests',
-                Reservations : 'Reservations',
-            },
             translations: {
                 info : 'Info',
                 trans : 'Translation for language',
@@ -880,6 +866,16 @@
                 city_view : 'Panoramica città',
                 island_view : 'Visuale isola'
             },
+            transport_calc : {
+                recruits : 'Calcola le truppe in reclutamento',
+                slowtrans : "Conta navi da trasporto lento",
+                fasttrans : "Conta navi da trasporto veloce",
+                Lack: "Mancanza",
+                Still: "Ancora",
+                pop: "popolazione disponibile. Per il",
+                Optipop : "Popolazione ottimale per",
+                army : "Non hai un esercito.",
+            },
             translations: {
                 info : 'Info',
                 trans : 'Traduzione per lingua',
@@ -910,6 +906,12 @@
         //////////////////////////////////////////////
         //      French Translation by eclat49       //
         //////////////////////////////////////////////
+        fr: {
+            Notification: {
+                A: daaaa,
+                B: "Information important Les options personnalisées ont été réinitialisé",
+                C: 'Les option "Raccourcis clavier pour Windows" et "Vue de la ville" sont à active dans les paramètres',
+            },
             link: {
                 Update: "https://www.tuto-de-david1327.com/annonces/dio-tools-david1327/mise-a-jour-"+ updateversion +".html",
                 contact: "https://www.tuto-de-david1327.com/pages/dio-tools-david1327/",
@@ -924,6 +926,8 @@
             },
             Settings: {
                 dsc: "DIO-Tools offres certains écrans, une boîte de smiley, les options <br>commerciales, des changements à la mise en page et d'autres choses.",
+                act: "Activation/Désactivation des fonctions:",
+                prv: "Aperçu des fonctions séparées:",
 
                 version_old: "La version n'est pas à jour",
                 version_new: "La version est à jour",
@@ -1519,6 +1523,13 @@
                 Feature2: "Nowa wersja",
                 Learn_more: "Ucz się więcej",
 
+                //cat_units: "",
+                //cat_icons: "",
+                //cat_forum: "",
+                //cat_trade: "",
+                //cat_wonders: "",
+                //cat_layout: "",
+                //cat_other: ""
             },
             Options: {
                 //bir: ["Licznik birem", "Zlicza i sumuje biremy z miast"],
@@ -3471,6 +3482,7 @@
 
         },
     };
+
 
     LANG.ar = LANG.es;
     LANG.pt = LANG.br;
