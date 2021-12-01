@@ -14108,7 +14108,7 @@ function DIO_GAME(dio_version, gm, DATA, time_a) {
                 if ($('#town_groups_list').length) {
                     if (!$('.dio_town_bb').get(0)) {
                         townslist.add();
-                    }
+                    } 
                 }
             }, 100); //0.1s
             this.addCopyListener()
