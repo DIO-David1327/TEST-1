@@ -3,7 +3,7 @@
 // @name:fr		DIO-TOOLS-David1327
 // @namespace	https://www.tuto-de-david1327.com/pages/info/dio-tools-david1327.html
 // @contributionURL https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7X8R9RK3TWGNN&source=url
-// @version		4.23
+// @version		4.24
 // @author		DIONY (changes and bug fixes by David1327)
 // @description Version 2021. DIO-Tools + Quack is a small extension for the browser game Grepolis. (counter, displays, smilies, trade options, changes to the layout)
 // @description:FR Version 2021. DIO-Tools + Quack est une petite extension du jeu par navigateur Grepolis. (compteur, affichages, smileys, options commerciales, modifications de la mise en page)
@@ -26,7 +26,7 @@
 // @license     GPL-3.0
 // ==/UserScript==
 
-var dio_version = '4.23';
+var dio_version = '4.24';
 
 /*******************************************************************************************************************************
  * Global stuff
@@ -4168,6 +4168,7 @@ function DIO_GAME(dio_version, gm, DATA, time_a) {
                     version_text = "<a href='"+ getTexts('link', 'update') +"' target='_blank' style='color:crimson'><div class='version_icon red'></div><div class='version_text'>" + getTexts("Settings", 'version_old') + "</div><div class='version_icon red'></div></a>" +
                         "<a class='version_text' href='"+ getTexts('link', 'update_direct') +"' target='_blank'>--> " + getTexts("Settings", 'version_update') + "</a>";
                     version_color = 'crimson';
+                    Messageversion = uw.HumanMessage.error("DIO-TOOLS " + getTexts("Settings", 'version_old'));
                 }
                 v_info.html(version_text).css({color: version_color});
             }
@@ -5989,8 +5990,8 @@ function DIO_GAME(dio_version, gm, DATA, time_a) {
             uw.NotificationType.DIO_TOOLS = "diotools";
 
             var notif = DATA.notification;
-            if (notif <= 23 || david1327) {
-                Notification.create(23, getTexts("Settings", "Feature")); //getTexts("Settings", "Feature") + ' (' + getTexts("Options", "")[0] + ')');
+            if (notif <= 24 || david1327) {
+                Notification.create(24, getTexts("Settings", "Feature")); //getTexts("Settings", "Feature") + ' (' + getTexts("Options", "")[0] + ')');
 
                 // Click Event
                 $('.diotools .icon').click(function () {
@@ -5998,7 +5999,7 @@ function DIO_GAME(dio_version, gm, DATA, time_a) {
                     $(this).parent().find(".close").click();
                 });
 
-                saveValue('notif', '22');}
+                saveValue('notif', '25');}
 
 
         },
@@ -6042,24 +6043,56 @@ function DIO_GAME(dio_version, gm, DATA, time_a) {
                 HTML_tab1 += grepoGameBorder + getTexts("Settings", "Update") + '</div>';
 
                 //
+                var version = dio_version[2] += dio_version[3]
+                var beforeversion = dio_version.replace(version, version-1);
                 HTML_tab1 += '<div id="NotifText">' +
                     //'<p>- '+ getTexts("Notification", "A") +'.</p>' +
 
 '<iframe src="https://discord.com/widget?id=838203647028232213&theme=dark" width="350" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>' +
 
-'<div style="height: 45px;padding: 25px 0px 0px 110px;font-size: 18px;color: #FFF;background: url(https://www.tuto-de-david1327.com/medias/images/gpcl-balance.png) no-repeat;font-weight: bold;">Informations</div>' +
+                    '<div style="height: 45px;padding: 25px 0px 0px 110px;font-size: 18px;color: #FFF;background: url(https://www.tuto-de-david1327.com/medias/images/gpcl-tip.png) no-repeat;font-weight: bold;">News and changes</div>' +
 
-'<p>D&ucirc; &agrave; des probl&egrave;mes d&#39;h&eacute;bergeur,&nbsp;j&#39;ai d&ucirc; changer d&#39;h&eacute;bergeur.</p>' +
-
-'<p>Merci de mettre &agrave; jour via ce lien :<br />' +
-'-&nbsp;<a href="https://github.com/DIO-David1327/DIO-TOOLS-David1327/raw/main/code.user.js">https://github.com/DIO-David1327/DIO-TOOLS-David1327/raw/main/code.user.js</a></p>' +
+'<p><span style="font-size:18px;"></span><span style="font-size:18px;"><span style="font-size:18px;">- Message version :</span></span><br />' +
+'-&gt; Update checking has been improved<br />' +
+'<img alt="Capture d ecran 2021 10 31 165135" height="66" src="https://www.tuto-de-david1327.com/medias/images/capture-d-ecran-2021-10-31-165135.png" width="404" /></p>' +
 
 '<p>&nbsp;</p>' +
+
+'<p><span style="font-size:18px;">- List of cities in BB-Code :</span><br />' +
+'&nbsp;-&gt; It is now possible to generate up to 300 cities.<br />' +
+'&nbsp;<img alt="Capture d ecran 2021 09 02 091200" height="371" src="https://www.tuto-de-david1327.com/medias/images/capture-d-ecran-2021-09-02-091200.png" width="500" /></p>' +
+
+'<p>&nbsp;</p>' +
+
+'<p><span style="font-size:18px;">- <span style="font-size:18px;"><span style="font-size:18px;"> Translations :</span></span></span><br />' +
+'-&gt; Optimization of the function for translation<br />' +
+'-&gt; Thanks to AbstractGR for adding the GREEK language<br />' +
+'-&gt;&nbsp;Do you know that you can help me translate the script anytime ?<br />' +
+'<img alt="Traductions" height="545" src="https://www.tuto-de-david1327.com/medias/images/traductions.png" width="1021" /></p>' +
+
+'<div style="height: 45px;padding: 25px 0px 0px 110px;font-size: 18px;color: #FFF;background: url(https://www.tuto-de-david1327.com/medias/images/gpcl-bug.png) no-repeat;font-weight: bold;">Bug fixes</div>' +
+
+'<p><span style="font-size:18px;"></span><span style="font-size:18px;"></span><span style="font-size:18px;"></span></p>' +
+
+'<p><span style="font-size:18px;">- Caves </span><span style="font-size:18px;"> :</span><br />' +
+'-&gt; The function does not activate is not always -&gt; Problem solved.</p>' +
+
+'<p><span style="font-size:18px;"></span></p>' +
+
+'<p><span style="font-size:18px;">-</span><span style="font-size:18px;"></span><span style="font-size:18px;"> City view :</span><br />' +
+'-&gt; The function is now disabled by default</p>' +
+
+'<p><span style="font-size:18px;">-</span><span style="font-size:18px;"> Recruitment trade :</span><br />' +
+'&nbsp;-&gt; The ratio was not good -&gt; the ratio is now calculated by itself thanks to a function.<br />' +
+'<img alt="Capture d ecran 2021 10 31 164630" height="265" src="https://www.tuto-de-david1327.com/medias/images/capture-d-ecran-2021-10-31-164630.png" width="154" /></p>' +
 
                     '<div style="height: 30px;background: url(https://www.tuto-de-david1327.com/medias/images/gpcl-line.png) no-repeat;font-weight: bold;">&nbsp;</div>' +
 
                     '<p>Please feel free to report any bugs and <a href="'+ getTexts("link", "Update") +'" target="_blank">comment</a> on this update!</p>' +
 
+                    '<p><br />' +
+                    '<p>To see all the modifications I invite you to go to this link<br />' +
+                    '<a href="https://github.com/DIO-David1327/DIO-TOOLS-David1327/compare/' + beforeversion + '...' + dio_version + '">https://github.com/DIO-David1327/DIO-TOOLS-David1327/compare/' + beforeversion + '...' + dio_version + '</a></p>' +
                     '<p><br />' +
                     'Good evening and good game.<br />' +
                     'Regards,</p>';
@@ -14107,7 +14140,7 @@ function DIO_GAME(dio_version, gm, DATA, time_a) {
                 cultureOverview.activate();
                 if ($('#town_groups_list').length) {
                     if (!$('.dio_town_bb').get(0)) {
-                        townslist.add(); 
+                        townslist.add();
                     }
                 }
             }, 100); //0.1s
@@ -14150,7 +14183,7 @@ function DIO_GAME(dio_version, gm, DATA, time_a) {
                             bb_premiumb = "(" + bb_premium + ")";
                             bb_premiumc = true;
                         }
-                        var bb_count = 150, bb_nombre_ville = 150, bb_nonbre = 1, bb_ville = uw.DM.getl10n("market").city;
+                        var bb_count = 0, bb_nombre_ville = 0, bb_nonbre = 1, bb_ville = uw.DM.getl10n("market").city;
 
                         $.each(cities_towngroup, function (key, town) {
                             bb_nombre_ville++;
