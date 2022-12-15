@@ -15,7 +15,7 @@ LANGG = {
             ///donate:
             //Donate: "",
             ///autre
-            Update: "https://www.tuto-de-david1327.com/annonces/dio-tools-david1327/mise-a-jour-" + updateversion + ".html",
+            Update: "https://www.tuto-de-david1327.com/annonces/dio-tools-david1327/mise-a-jour-.html",
             contact: "https://www.tuto-de-david1327.com/pages/dio-tools-david1327/",
             forum: "https://fr.forum.grepolis.com/index.php?threads/dio-tools-david1327.79567/",
             link_troupes: "https://www.tuto-de-david1327.com/pages/troupes-grepolis.html",
