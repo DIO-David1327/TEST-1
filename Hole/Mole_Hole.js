@@ -5,7 +5,10 @@
 // @match        http://*/*
 // @grant        none
 // @license     MIT
+// @version      1.36
+// @require		https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
 // ==/UserScript==
+let uw = unsafeWindow || window, $ = uw.jQuery
 
 console.log(111111111111)
 _log = function(e) {
