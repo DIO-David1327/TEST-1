@@ -8,7 +8,7 @@
 // ==/UserScript==
 
 
-/*_log = function(e) {
+_log = function(e) {
     "undefined" != typeof DBG && DBG.log(e)
 }
 ,
@@ -18,8 +18,8 @@ Object.size = function(e) {
         e.hasOwnProperty(t) && n++;
     return n
 }
-,*/
-var MH = {
+,
+MH = {
     Home: "https://www.tuto-de-david1327.com/",
     sName: "Mole Hole",
     sVer: "1.36 (08.02.2020)",
